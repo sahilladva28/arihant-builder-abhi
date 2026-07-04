@@ -80,7 +80,7 @@ app.post('/api/auth/login', (req, res) => {
     const passwordPath = path.join(process.cwd(), 'admin_password.txt');
     if (!fs.existsSync(passwordPath)) {
       // Auto-recreate password file if it was deleted
-      fs.writeFileSync(passwordPath, '1989', 'utf8');
+      fs.writeFileSync(passwordPath, '1969', 'utf8');
     }
     
     const correctPin = fs.readFileSync(passwordPath, 'utf8').trim();
